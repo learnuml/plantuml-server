@@ -105,6 +105,25 @@ The server is now listing to [http://localhost:8080/plantuml](http://localhost:8
 You may specify the port in `-p` Docker command line argument.
 
 
+How to run the server using docker-compose
+==========================================
+```
+
+[me@os02t plantuml-server]$ ls -rt
+README.md  Dockerfile.tomcat  Dockerfile          COPYING      src
+pom.xml    Dockerfile.jetty   docker-compose.yml  screenshots
+[me@os02t plantuml-server]$ sudo docker-compose up
+<snipped>
+ontext@5e5792a0{plantuml,/plantuml,[file:///tmp/jetty-0.0.0.0-8080-plantuml.war-_plantuml-any-3144337322814683688.dir/webapp/, jar:file:///tmp/jetty-0.0.0.0-8080-plantuml.war-_plantuml-any-3144337322814683688.dir/webapp/WEB-INF/lib/codemirror-3.21.jar!/META-INF/resources],AVAILABLE}{/plantuml.war}
+plantuml-server    | 2019-11-09 15:58:40.929:INFO:oejs.AbstractConnector:main: Started ServerConnector@2145b572{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+plantuml-server    | 2019-11-09 15:58:40.930:INFO:oejs.Server:main: Started @1496ms
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping plantuml-server ... done
+[me@os02t plantuml-server]$
+```
+
+
+
 How to generate the war
 =======================
 
